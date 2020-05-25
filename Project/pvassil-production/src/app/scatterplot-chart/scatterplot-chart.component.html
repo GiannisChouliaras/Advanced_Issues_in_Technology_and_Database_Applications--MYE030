@@ -1,0 +1,99 @@
+<div class="stepper" *ngIf="!this.createGraph">
+  <mat-horizontal-stepper linear>
+    <!-- First step: Countries! -->
+    <mat-step label="Countries" [completed]="step0" editable="false">
+      <mat-form-field>
+        <mat-label>Select Country</mat-label>
+        <mat-select [(value)]="countrySelect">
+          <mat-option
+            (click)="changeStep0()"
+            *ngFor="let country of countries$"
+            [value]="country.country_code"
+          >
+            {{ country.country }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button
+          mat-button
+          mat-raised-button
+          matStepperNext
+          (click)="getIndicators()"
+        >
+          Next
+        </button>
+      </div>
+    </mat-step>
+
+    <!-- Second step: Indicators! -->
+    <mat-step label="First Indicator" [completed]="step1" editable="false">
+      <mat-form-field>
+        <mat-label>Select First Indicator</mat-label>
+        <mat-select [(value)]="indicatorSelect1">
+          <mat-option
+            (click)="changeStep1()"
+            *ngFor="let indicator of indicators$"
+            [value]="indicator.indicator_code"
+          >
+            {{ indicator.indicator }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button
+          mat-button
+          mat-raised-button
+          matStepperNext
+          (click)="byeIndicator()"
+        >
+          Next
+        </button>
+      </div>
+    </mat-step>
+
+    <mat-step label="Second Indicator" [completed]="step2" editable="false">
+      <mat-form-field>
+        <mat-label>Select Second Indicator</mat-label>
+        <mat-select [(value)]="indicatorSelect2">
+          <mat-option
+            (click)="changeStep2()"
+            *ngFor="let indicator of indicators$"
+            [value]="indicator.indicator_code"
+          >
+            {{ indicator.indicator }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button mat-raised-button matStepperNext (click)="query()">
+          Next
+        </button>
+      </div>
+    </mat-step>
+
+    <!-- Finish Stepper -->
+    <mat-step label="Finish">
+      <div>
+        <button mat-button mat-raised-button (click)="epilogi()">
+          Show me Graph
+        </button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+
+<div class="scatterplot" *ngIf="!this.createGraph">
+  <h1>SCATTER PLOT</h1>
+  <p>
+    A scatterplot is a type of data display that shows the relationship between
+    two numerical variables. Each member of the dataset gets plotted as a point
+    whose (x,y)left parenthesis, x, comma, y, right parenthesis coordinates
+    relates to its values for the two variables.
+  </p>
+</div>
+
+<div class="stepper" *ngIf="this.createGraph">
+  <div *ngIf="this.f1">{{ playData() }}</div>
+  <div class="d3"></div>
+</div>
