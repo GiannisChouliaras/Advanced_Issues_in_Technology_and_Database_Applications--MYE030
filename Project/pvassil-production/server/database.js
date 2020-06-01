@@ -10,7 +10,7 @@ app.use(cors());
 const pool = mysql.createPool({
   host: "localhost",
   user: "root",
-  password: "screamtomeioannina",
+  password: "screamformeioannina",
   database: "WORLDBANK",
   port: "3306",
 });
