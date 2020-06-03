@@ -1,10 +1,10 @@
 # CARPE NOCTEM
 
 ## Description
-This project implements a simple webpage where you can select some countries and indicators and display the measurements via graphs.
+This project implements a simple webpage where you can select some countries, some indicators and display the measurements via graphs.
 
 ## Installation
-1. Install Java and MySQL
+1. Install Python and MySQL
 2. Install node.js (visit the page [here](https://nodejs.org/en/download/).)
 3. Install Angular
   * npm install
