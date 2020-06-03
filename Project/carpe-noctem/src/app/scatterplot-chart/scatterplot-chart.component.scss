@@ -1,0 +1,39 @@
+.stepper {
+  width: auto;
+  height: auto;
+}
+
+.d3 {
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.button {
+  margin: 10px auto;
+  display: block;
+}
+
+.tooltip {
+  width: 900px;
+}
+
+// ****** SCATTER - PLOT ******//
+
+.scatterplot {
+  width: 50%;
+  position: relative;
+  margin: 30px auto 0 auto;
+
+  h1 {
+    text-align: center;
+    font-family: "Piedra";
+    color: rgba(101, 166, 201, 0.988);
+  }
+
+  p {
+    text-align: center;
+    margin-top: 30px;
+    color: white;
+  }
+}

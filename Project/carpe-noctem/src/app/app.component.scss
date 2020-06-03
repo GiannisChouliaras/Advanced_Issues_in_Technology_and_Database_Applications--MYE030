@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Nunito&display=swap");
+
+$header_color: rgb(43, 43, 43);
+$my_font: "Nunito";
+
+.header {
+  font-family: $my_font;
+  height: 80px;
+  width: 100%;
+  display: block;
+  color: white;
+  font-size: 18px;
+  background: $header_color;
+}
+
+.innerHeader {
+  width: auto;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+.logo_container {
+  height: 100%;
+  display: table;
+  float: left;
+  padding-left: 1rem;
+}
+
+.logo {
+  color: rgb(150, 150, 150);
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: $my_font;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.logo:hover {
+  color: white;
+}
+
+.navigation {
+  float: right;
+  height: 100%;
+}
+
+.navigation a {
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px;
+}
+
+.navigation a:last-child {
+  // padding-right: 0px;
+  margin-right: auto;
+}
+
+.navigation a li {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: rgb(150, 150, 150);
+  font-family: $my_font;
+  font-size: 16px;
+}
+
+.navigation a li:hover {
+  color: white;
+}
+
+// END OF HEADER

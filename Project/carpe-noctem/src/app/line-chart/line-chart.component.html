@@ -1,0 +1,95 @@
+<div class="stepper" *ngIf="!this.createGraph">
+  <mat-horizontal-stepper linear>
+    <!-- First step: Countries! -->
+    <mat-step label="Countries" [completed]="step0" editable="false">
+      <mat-form-field>
+        <mat-label>Select Country</mat-label>
+        <mat-select [formControl]="countriesForm" multiple>
+          <mat-option
+            (click)="changeStep0()"
+            *ngFor="let country of countries$"
+            [value]="country.country_code"
+          >
+            {{ country.country }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button
+          mat-button
+          mat-raised-button
+          matStepperNext
+          (click)="getIndicators()"
+        >
+          Next
+        </button>
+      </div>
+    </mat-step>
+
+    <!-- Second step: Indicators! -->
+    <mat-step label="Indicators" [completed]="step1" editable="false">
+      <mat-form-field>
+        <mat-label>Select Indicator</mat-label>
+        <mat-select [formControl]="indicatorsForm" multiple>
+          <mat-option
+            (click)="changeStep1()"
+            *ngFor="let indicator of indicators$"
+            [value]="indicator.indicator_code"
+          >
+            {{ indicator.indicator }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button mat-raised-button matStepperNext>
+          Next
+        </button>
+      </div>
+    </mat-step>
+
+    <!-- Third step: Years! -->
+    <mat-step label="Years" [completed]="step2" editable="false">
+      <mat-form-field>
+        <mat-label>Select Years</mat-label>
+        <mat-select [(value)]="this.yearSelect">
+          <mat-option
+            (click)="changeStep2()"
+            *ngFor="let year of years"
+            [value]="year"
+            >{{ year }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <div>
+        <button mat-button mat-raised-button matStepperNext (click)="myQuery()">
+          Next
+        </button>
+      </div>
+    </mat-step>
+
+    <!-- Finish Stepper -->
+    <mat-step label="Finish">
+      <div>
+        <button mat-button mat-raised-button (click)="epilogi()">
+          Show me Graph
+        </button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+
+<div class="linechart" *ngIf="!this.createGraph">
+  <h1>LINE CHART</h1>
+  <p>
+    A line chart is a graphical representation of an asset's historical price
+    action that connects a series of data points with a continuous line. This is
+    the most basic type of chart used in finance and typically only depicts a
+    security's closing prices over time. Line charts can be used on any
+    timeframe, but most often using day-to-day price changes.
+  </p>
+</div>
+
+<div class="stepper" *ngIf="this.createGraph">
+  <div *ngIf="this.f1">{{ playData() }}</div>
+  <div class="d3"></div>
+</div>

@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Piedra&display=swap");
+$myFont: "nunito";
+$backgroundColor: rgb(69, 69, 69);
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+body,
+html {
+  font-family: "nunito";
+  font-size: 14px;
+  background-color: $backgroundColor;
+  min-width: 700px;
+  height: 100%;
+  min-height: 100%;
+}
+
+footer {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.509);
+  color: rgba(255, 255, 255, 0.605);
+  position: relative;
+  height: 100px;
+  margin-top: -100px;
+  width: 100%;
+
+  .info {
+    width: 100%;
+    height: 100%;
+    clear: both;
+  }
+
+  #professor {
+    visibility: hidden;
+    float: left;
+    width: 50%;
+    height: 80%;
+    font-family: "nunito";
+  }
+
+  #devteam {
+    visibility: hidden;
+    float: right;
+    width: 50%;
+    height: 80%;
+    font-family: "nunito";
+  }
+
+  p {
+    font-size: smaller;
+  }
+}
+
+footer:hover {
+  #professor,
+  #devteam {
+    visibility: visible;
+  }
+}
