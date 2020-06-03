@@ -1,4 +1,4 @@
-# Project 2020 for the course MYE030 -- MySQL / PYTHON / ANGULAR / NODE.JS / D3.JS
+# CARPE NOCTEM
 
 ## Description
 This project implements a simple webpage where you can select some countries and indicators and display the measurements via graphs.
