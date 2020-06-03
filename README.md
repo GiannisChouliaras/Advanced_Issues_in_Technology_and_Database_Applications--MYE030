@@ -35,8 +35,8 @@ For this version the usage is:
 ### v.1 [June 2020]
 In the course "Advanced technology and database applications, we were asked to design and implement an integrated information system. The goal was to start with simple specifications and come up with an integrated system.
 
-## Video
-There is a small video that demonstrates the usage [here](https://github.com/GiannisChouliaras/Advanced_Issues_in_Technology_and_Database_Applications--MYE030/tree/master/Deliverables)
+## Video and Report
+You can find the video link and the report of the project in the folder Deliverables or click [here](https://github.com/GiannisChouliaras/Advanced_Issues_in_Technology_and_Database_Applications--MYE030/tree/master/Deliverables)
 
 ## Built With :
 ### For The Database
