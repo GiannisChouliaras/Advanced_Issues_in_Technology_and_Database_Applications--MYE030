@@ -1,4 +1,5 @@
-# Project 2020 for the course MYE030 -- MySQL / PYTHON / ANGULAR / NODE.JS / D3.JS
+# Project for the course MYE030
+### Advanced issues in technology and database applications.
 
 ## Description
 This project implements a simple webpage where you can select some countries and indicators and display the measurements via graphs.
